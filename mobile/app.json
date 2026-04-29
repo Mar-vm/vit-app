@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "VitalIA",
+    "slug": "vitalia",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a2840"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.vitalia.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "VitalIA necesita acceso a tu cámara para fotografiar y analizar condiciones de tu piel.",
+        "NSPhotoLibraryUsageDescription": "VitalIA necesita acceso a tu galería para seleccionar imágenes para el análisis.",
+        "NSLocationWhenInUseUsageDescription": "VitalIA puede usar tu ubicación para encontrar dermatólogos cercanos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a2840"
+      },
+      "package": "com.vitalia.app",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "VitalIA necesita acceso a tu cámara para el análisis de piel."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "VitalIA necesita acceso a tu galería de fotos."
+        }
+      ],
+      "expo-font",
+      "expo-router",
+      "expo-secure-store"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cb90be1b-c833-46e8-9391-62557f5de94b"
+      }
+    },
+    "owner": "mar-vm"
+  }
+}
